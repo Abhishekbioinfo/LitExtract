@@ -1,4 +1,4 @@
-# BioMiner: Deep-Learning PubMed Biomarker Extractor
+# LitExtract: Deep-Learning PubMed Biomarker Extractor
 BioMiner is an automated bioinformatics pipeline designed to extract structured genomic biomarker data from PubMed literature. Utilizing PubMedBERT (a transformer model pre-trained on biomedical text) and SciSpacy, the tool identifies gene-variant-drug interactions and scores their clinical relevance.
 
 ## 🧬 Project Context
@@ -14,7 +14,7 @@ This tool was developed to support the identification of IHC-feasible biomarkers
 * **Relational Database:** Stores data in a structured PostgreSQL schema, allowing for complex SQL queries across nearly 50,000 evidence points.
 
 ## 📂 Repository Structure
-* **pipeline.py:** The main orchestrator that manages batch processing and logic flow.
+* **litextract.py:** The main orchestrator that manages batch processing and logic flow.
 
 * **pubmed_client.py:** Handles API communication with NCBI and XML parsing.
 
@@ -37,7 +37,7 @@ This tool was developed to support the identification of IHC-feasible biomarkers
 2. Environment Setup
 ```Bash
 git clone https://github.com/yourusername/biominer.git
-cd biominer
+cd litextract
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 # Install SciSpacy for biomedical entity recognition
@@ -55,11 +55,11 @@ cp config.py.example config.py
 Run the pipeline using your dedicated GPU:
 
 ```Bash
-python3 biominer.py
+python3 litextract.py
 
 or
 
-CUDA_VISIBLE_DEVICES=0 python3 biominer.py
+CUDA_VISIBLE_DEVICES=0 python3 litextract.py
 ```
 
 ## 📊 Data Interpretation: Clinical Relevance Score
