@@ -1,5 +1,5 @@
 # LitExtract: Deep-Learning PubMed Biomarker Extractor
-BioMiner is an automated bioinformatics pipeline designed to extract structured genomic biomarker data from PubMed literature. Utilizing PubMedBERT (a transformer model pre-trained on biomedical text) and SciSpacy, the tool identifies gene-variant-drug interactions and scores their clinical relevance.
+LitExtract is an automated bioinformatics pipeline designed to extract structured genomic biomarker data from PubMed literature. Utilizing PubMedBERT (a transformer model pre-trained on biomedical text) and SciSpacy, the tool identifies gene-variant-drug interactions and scores their clinical relevance.
 
 ## 🧬 Project Context
 This tool was developed to support the identification of IHC-feasible biomarkers and actionable genomic variants for Indian Colorectal Cancer (CRC) and Prostate Cancer cohorts. By mining the global knowledgebase, we can cross-reference local patient data against established clinical evidence.
@@ -36,7 +36,7 @@ This tool was developed to support the identification of IHC-feasible biomarkers
 
 2. Environment Setup
 ```Bash
-git clone https://github.com/yourusername/biominer.git
+git clone https://github.com/yourusername/litextract.git
 cd litextract
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
